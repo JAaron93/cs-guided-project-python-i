@@ -14,4 +14,14 @@ Notes:
 """
 def mapping(letters):
     # Your code here
+    dict = {}
+    for i in letters:
+        looped_dict = {i.lower(): i.upper()}
+        # This method is like .append()
+        dict.update(looped_dict)
 
+    return dict
+
+print(mapping(["p", "s"]))
+print(mapping(["a", "b", "c"]))
+print(mapping(["a", "v", "y", "z"]))

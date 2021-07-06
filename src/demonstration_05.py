@@ -10,6 +10,14 @@ Examples:
 - sort_by_length(["may", "april", "september", "august"]) ➞ ["may", "april", "august", "september"]
 - sort_by_length([]) ➞ []
 """
+
+
 def sort_by_length(lst):
     # Your code here
+    # CANT ASSIGN LST TO A VARIABLE
+    lst.sort(key=len)
+    return lst
 
+
+print(sort_by_length(["a", "ccc", "dddd", "bb"]))
+print(sort_by_length(["may", "april", "september", "august"]))

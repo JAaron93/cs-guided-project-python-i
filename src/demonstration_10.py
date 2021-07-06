@@ -15,4 +15,15 @@ Notes:
 """
 def get_discounts(nums, percentage):
     # Your code here
+    # Have to create an empty list, other wise the for loop will iterate over every character. 
+    # So we must append everything to this empty list so that the iteration is done on every entry in the list.
+    output = []
+    for n in nums:
+        # Have to use int() functions as to insert percentage AND apply the .replace method to rid ourselves of that symbol
+        output.append(n/int(100/int(percentage.replace('%', ''))))
+    
+    return output
 
+print(get_discounts([2, 4, 6, 11], "50%"))
+print(get_discounts([10, 20, 40, 80], "75%"))
+print(get_discounts([100], "45%"))

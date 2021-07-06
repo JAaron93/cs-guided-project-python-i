@@ -15,6 +15,14 @@ Examples:
 - XO("zpzpzpp") ➞ True (Returns True if no x and o)
 - XO("zzoo") ➞ False
 """
+
+
 def XO(txt):
     # Your code here
+    txt = txt.lower()
+    return txt.count("x") == txt.count("o")
 
+
+print(XO("ooxx"))
+print(XO("zpzpzpp"))
+print(XO("zzoo"))
